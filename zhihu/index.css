@@ -6,7 +6,7 @@ html,body {
 	font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
 	-webkit-font-smoothing: subpixel-antialiased;
 	color:#555;
-	background-color: #f7fafc;
+
 }
 
 a:link,
@@ -82,12 +82,13 @@ body .mainBlock .main .header h2 {
 
 .signInUp .title #chooseLine {
 	position: absolute;
-	height: 2px;
-	width: 2.4em;
+	height: 1.9px;
+	width: 2.6em;
 	margin:0 1em;
 	background-color: #0f88eb;
 	bottom: 0;
 	left: 0;
+	transition: all 0.15s;
 
 	
 }
@@ -170,18 +171,29 @@ body .mainBlock .main .header h2 {
 	background-color: #55abed;
 }
 
+.signin-others
+{
+	overflow: hidden;
+}
+
 .signup-others p{
 	color:#999;
 	font-size: 13px;
 }
+
 
 .signup-others p a {
 	color:#698ebf;
 }
 
 
-.signin-others .wayToSignin {
+.wayToSignin {
 	float: left;
+}
+
+.cantSignIn {
+	float: right;
+	font-size: 14px;
 }
 
 .signin-others .wayToSignin button {
@@ -197,7 +209,9 @@ body .mainBlock .main .header h2 {
 	color: #5ca5e8;
 }
 
-
+.signin-others .wayToSignin button:last-child {
+	margin-top: 20px;
+}
 
 .signin-others .cantSignIn {
 	float: right;
@@ -211,7 +225,7 @@ body .mainBlock .main .header h2 {
 	color: #5fa6e5;
 	line-height: 39px;
 	cursor: pointer;
-	margin-top: 48px;
+	margin-top: 30px;
 	font-size: 15px;
 	border-radius: 3px;
 }
@@ -223,12 +237,13 @@ body .mainBlock .main .header h2 {
 
 
 footer {
-	width:530px;
+	/*width:530px;*/
 	text-align: center;
-	margin: 0 auto;
+	/*padding: 0 auto;*/
 	font-size: 12px;
 	line-height: 21px;
 	color:#aebdc9;
+	background-color: #f7fafc;
 
 }
 
@@ -298,7 +313,15 @@ footer .cecdc img {
 
 
 
-canvas
+#moveBackground
 {
 	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	/*height: 100%;*/
+	/*width: 100%;*/
+	background-color: #f7fafc;
 }
