@@ -236,8 +236,9 @@ footer .links span
 	margin:0 3px;
 }
 
+footer a:link,
 footer a:visited {
-	line-height: 40px;
+	line-height: 20px;
 	color: #aebdc9;
 }
 
