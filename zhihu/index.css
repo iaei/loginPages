@@ -1,0 +1,302 @@
+html,body {
+	margin: 0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	color:#555;
+	background-color: #f7fafc;
+}
+
+a:visited {
+	color: #555;
+}
+a {
+	text-decoration: none;
+}
+
+::-moz-placeholder { color: #ccc;}
+::-webkit-input-placeholder { color:#ccc; }
+:-ms-input-placeholder { color:#ccc; }
+
+body .mainBlock {
+	min-height: 720px;
+	text-align: center;
+	height: 95%;
+
+}
+
+body .mainBlock::before
+{
+	content: "";
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+
+}
+
+body .mainBlock .main {
+	display: inline-block;
+	min-height:590px; 
+	width: 300px;
+	vertical-align: middle;
+	
+
+}
+
+
+body .mainBlock .main .header  {
+	text-align: center;
+}
+
+
+body .mainBlock .main .header h2 {
+	font-size: 18px;
+	font-weight: 400;
+	margin:26px 0 20px;
+	line-height: 1;
+
+}
+
+.signInUp {
+	/*text-align: center;*/
+}
+
+.signInUp .title {
+	height: 35px;
+	width: 100%;
+	margin:0 auto 19px;
+
+	/*text-align: center;*/
+
+}
+
+.signInUp .aWrap {
+	width: 144px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.signInUp .title #chooseLine {
+	position: absolute;
+	height: 2px;
+	width: 2.4em;
+	margin:0 1em;
+	background-color: #0f88eb;
+	bottom: 0;
+	left: 0;
+
+	
+}
+
+.signInUp .title a[class=active] {
+	color: #0f88eb;
+}
+
+.signInUp .title a{
+	line-height: 35px;
+	width: 72px;
+	font-size: 18px;
+	text-align: center;
+	opacity: 0.7;
+	font-weight: 8px;
+
+}
+
+.signInUp .title a:hover{
+	opacity: 1;
+}
+
+.signInUp .title a[class=active]:hover {
+	opacity: 0.7;
+}
+
+.signInUp .title a:first-child {
+	float: left;
+}
+
+.signInUp .title a:last-child {
+	float: right;
+}
+
+
+.inputWrap {
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+	padding: 1px 0;
+}
+.inputWrap input {
+	width: 100%;
+	height: 48px;
+	padding: 10px 12px;
+	box-sizing: border-box;
+	background-color: #fff;
+	border: none;
+	border-bottom:1px solid #e8e8e8;
+	box-shadow: none;
+}
+
+.inputWrap input:last-child {
+
+	border-bottom: none;
+
+}
+
+.inputWrap input:focus {
+	outline: none;
+}
+
+
+.signup-form button,
+.signin-form button {
+	width: 300px;
+	height: 41px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	background-color: #0f88eb;
+	border:none;
+	border-radius: 3px;
+	margin :18px auto 10px;
+	cursor: pointer;
+
+}
+
+.signup-form button:hover,
+.signin-form button:hover {
+	background-color: #55abed;
+}
+
+.signup-others p{
+	color:#999;
+	font-size: 13px;
+}
+
+.signup-others p a {
+	color:#698ebf;
+}
+
+
+.signin-others .wayToSignin {
+	float: left;
+}
+
+.signin-others .wayToSignin button {
+	display:block;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: #787878;
+
+}
+
+.signin-others .wayToSignin button:first-child {
+	color: #5ca5e8;
+}
+
+
+
+.signin-others .cantSignIn {
+	float: right;
+}
+
+
+#download {
+	width: 300px;
+	height: 39px;
+	border:1px solid #96c2e9;
+	color: #5fa6e5;
+	line-height: 39px;
+	cursor: pointer;
+	margin-top: 48px;
+	font-size: 15px;
+	border-radius: 3px;
+}
+
+
+#signin {
+	display: none;
+}
+
+
+footer {
+	width:530px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 21px;
+	color:#aebdc9;
+
+}
+
+footer .links span
+{
+	margin:0 3px;
+}
+
+footer a:visited {
+	line-height: 40px;
+	color: #aebdc9;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+footer .cecdc {
+	border-top:1;
+	border-top: 1px solid #ebeef0;
+	width: 400px;
+	margin:10px auto;
+	padding: 10px 0;
+}
+footer .cecdc img {
+	width: 138px;
+	height: 26px;
+
+}
+
+#suggestion {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	display: inline-block;
+	text-align: center;
+	font-size: 2px;
+	line-height: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,.15);
+	background-color: #fff;
+	cursor: pointer;
+	border:none;
+	outline: none;
+
+
+}
+
+#suggestion span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	background-image: url(img/suggest.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+}
+
+
+#suggestion:hover>span {
+	background-image: url(img/suggertHover.svg);
+}
+
+
+
+canvas
+{
+	position: absolute;
+}
