@@ -344,7 +344,7 @@ footer .forSmallScreen {
 
 @media (max-height: 600px) {
 	body .mainBlock {
-		height: 530px;
+		height: 545px;
 	}
 }
 
