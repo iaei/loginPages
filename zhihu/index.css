@@ -7,6 +7,11 @@ html,body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	color:#555;
 
+
+}
+
+html {
+	background-color: #f7fafc;
 }
 
 a:link,
@@ -22,9 +27,11 @@ a {
 :-ms-input-placeholder { color:#ccc; }
 
 body .mainBlock {
-	min-height: 720px;
+	height: 720px;
 	text-align: center;
-	height: 95%;
+	height: 100%;
+	min-width: 325px;
+
 
 }
 
@@ -55,7 +62,7 @@ body .mainBlock .main .header  {
 body .mainBlock .main .header h2 {
 	font-size: 18px;
 	font-weight: 400;
-	margin:26px 0 20px;
+	margin:30px 0 20px;
 	line-height: 1;
 
 }
@@ -138,6 +145,7 @@ body .mainBlock .main .header h2 {
 	border: none;
 	border-bottom:1px solid #e8e8e8;
 	box-shadow: none;
+	font-size: 14px;
 }
 
 .inputWrap input:last-child {
@@ -161,7 +169,7 @@ body .mainBlock .main .header h2 {
 	background-color: #0f88eb;
 	border:none;
 	border-radius: 3px;
-	margin :18px auto 10px;
+	margin :18px auto 22px;
 	cursor: pointer;
 
 }
@@ -202,6 +210,7 @@ body .mainBlock .main .header h2 {
 	background-color: transparent;
 	cursor: pointer;
 	color: #787878;
+	font-size: 14px;
 
 }
 
@@ -226,7 +235,7 @@ body .mainBlock .main .header h2 {
 	line-height: 39px;
 	cursor: pointer;
 	margin-top: 30px;
-	font-size: 15px;
+	font-size: 14px;
 	border-radius: 3px;
 }
 
@@ -243,11 +252,11 @@ footer {
 	font-size: 12px;
 	line-height: 21px;
 	color:#aebdc9;
-	background-color: #f7fafc;
+	
 
 }
 
-footer .links span
+footer span
 {
 	margin:0 3px;
 }
@@ -272,6 +281,13 @@ footer .cecdc {
 footer .cecdc img {
 	width: 138px;
 	height: 26px;
+
+}
+
+footer .forSmallScreen {
+	display: none;
+	background-color: transparent;
+	margin-top: -24px;
 
 }
 
@@ -321,7 +337,39 @@ footer .cecdc img {
 	bottom: 0;
 	left: 0;
 	z-index: -1;
-	/*height: 100%;*/
-	/*width: 100%;*/
-	background-color: #f7fafc;
+	height: 100%;
+	width: 100%;
+	/*background-color: #f7fafc;*/
+}
+
+@media (max-height: 600px) {
+	body .mainBlock {
+		height: 530px;
+	}
+}
+
+
+@media (max-width: 740px) {
+	#logo img {
+		height: 44.4px;
+		width: 96px;
+	}
+
+	.signInUp button[class=mainButton] {
+		margin-top: 23px;
+	}
+
+	footer .links,footer .cecdc {
+		display: none;
+	}
+
+	footer .forSmallScreen {
+		display: block;
+	}
+	
+	footer {
+		padding-bottom: 60px;
+	}
+
+
 }

@@ -1,14 +1,31 @@
 //定义画布宽高和生成点的个数
-	var WIDTH = window.innerWidth, HEIGHT = window.innerHeight, POINT = 35;
+	var WIDTH = window.innerWidth, HEIGHT = window.innerHeight, POINT = Point();
 	
 	var canvas = document.getElementById('Mycanvas');
 	canvas.width = WIDTH,
 	canvas.height = HEIGHT;
 	var context = canvas.getContext('2d');
-	context.strokeStyle = 'rgba(0,0,0,0.05)',
+	context.strokeStyle = 'rgba(0,0,0,0.01)',
 	context.strokeWidth = 1,
 	context.fillStyle = 'rgba(0,0,0,0.05)';
 	var circleArr = [];
+
+	//定义点的个数
+	function Point (w,h,amount){
+		var w = WIDTH;
+		var h = HEIGHT;
+		var area = w*h;
+		amount = Math.ceil(area/65590);
+		var min_amount = 5;
+		if (amount>min_amount){
+			amount = amount;
+
+		}else{
+			amount = min_amount;
+		}
+		return amount;
+
+	}
 
 	//线条：开始xy坐标，结束xy坐标，线条透明度
 	function Line (x, y, _x, _y, o) {
@@ -64,7 +81,7 @@
 						B = Math.abs(circleArr[i+j].y - circleArr[i].y);
 					var lineLength = Math.sqrt(A*A + B*B);
 					var C = 1/lineLength*7-0.009;
-					var lineOpacity = C > 0.03 ? 0.03 : C;
+					var lineOpacity = C > 0.02 ? 0.02 : C;
 					if (lineOpacity > 0) {
 						drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[i+j].x, circleArr[i+j].y, lineOpacity);
 					}
